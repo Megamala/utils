@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# A script that updates all current pip installed packages
+# by default, updates the default installations (which pip)
+#    alter to pipX.Y to target a specific installation
+# use pip freeze --local to target a virtualenv
+
+# POSIX only
+pip freeze | grep -v '^-e' | cut -d = -f 1 | xargs pip install --upgrade

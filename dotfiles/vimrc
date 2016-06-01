@@ -1,0 +1,22 @@
+" Python Friendly
+set tabstop=4
+set softtabstop=4
+set shiftround
+set expandtab
+set autoindent
+set smartindent
+
+" Set up VundleVim
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+call vundle#end()
+filetype plugin indent on
+
+" set statusline display
+set laststatus=2
